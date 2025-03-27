@@ -422,7 +422,7 @@ export default function MaintenancePage() {
                 </div>
                 <a
                   href="mailto:admin@waiphyoaung.dev"
-                  className="text-indigo-400 hover:text-indigo-300 mt-1 block scale-on-hover inline-block"
+                  className="text-indigo-400 hover:text-indigo-300 mt-1 scale-on-hover inline-block"
                 >
                   admin@waiphyoaung.dev
                 </a>
