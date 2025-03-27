@@ -14,7 +14,6 @@ import {
   Database,
   Cpu,
 } from "lucide-react";
-import Head from "next/head";
 
 // Define types for our state and props
 type CountdownState = {
@@ -41,6 +40,9 @@ export default function MaintenancePage() {
   });
 
   useEffect(() => {
+    // Set document title
+    document.title = "Site Under Maintenance | We'll Be Back Soon";
+
     const timer = setInterval(() => {
       setCountdown((prev) => {
         if (prev.seconds > 0) {
@@ -114,34 +116,6 @@ export default function MaintenancePage() {
 
   return (
     <>
-      <Head>
-        <title>Site Under Maintenance | We'll Be Back Soon</title>
-        <meta
-          name="description"
-          content="Our site is currently undergoing scheduled maintenance. We'll be back online shortly with improved performance and new features."
-        />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#6366f1" />
-      </Head>
-
       <style jsx global>{`
         @import url("https://fonts.googleapis.com/css2?family=Anta&display=swap");
 
